@@ -37,3 +37,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+bazel-*
+e2e_test.*
+tools/gulp-tasks/cldr/cldr-data/
