@@ -1,48 +1,22 @@
 <div class="wrapper">
-
-    <div class="col">
-      <h2>Winnie</h2>
-      <ul>
-        <li *ngFor="let card of getCards(1) | async">
-          <button class="left" (click)="moveLeft(card)"><</button>
-          {{card.description}}
-          <button class="right" (click)="moveRight(card)">></button>
-        </li>
-      </ul>
-      <button (click)="addItem(1)">Add Item +</button>
-    </div>
-    <div class="col">
-      <h2>Bob</h2>
-      <ul>
-          <li *ngFor="let card of getCards(2) | async">
-            <button class="left" (click)="moveLeft(card)"><</button>
-            {{card.description}}
-            <button class="right" (click)="moveRight(card)">></button>
-          </li>
-      </ul>
-      <button (click)="addItem(2)">Add Item +</button>
-    </div>
-    <div class="col">
-      <h2>Thomas</h2>
-      <ul>
-          <li *ngFor="let card of getCards(3) | async">
-            <button class="left" (click)="moveLeft(card)"><</button>
-            {{card.description}}
-            <button class="right" (click)="moveRight(card)">></button>
-          </li>
-      </ul>
-      <button (click)="addItem(3)">Add Item +</button>
-    </div>
-    <div class="col">
-      <h2>George</h2>
-      <ul>
-          <li *ngFor="let card of getCards(4) | async">
-            <button class="left" (click)="moveLeft(card)"><</button>
-            {{card.description}}
-            <button class="right" (click)="moveRight(card)">></button>
-          </li>
-      </ul>
-      <button (click)="addItem(4)">Add Item +</button>
-    </div>
-
+  <div class="col">
+    <h2>Winnie</h2>
+    <app-card [card]="item" *ngFor="let item of getCards(1) | async"></app-card>
+    <button (click)="addItem(1)">Add Item +</button>
+  </div>
+  <div class="col">
+    <h2>Bob</h2>
+    <app-card [card]="item" *ngFor="let item of getCards(2) | async"></app-card>
+    <button (click)="addItem(2)">Add Item +</button>
+  </div>
+  <div class="col">
+    <h2>Thomas</h2>
+    <app-card [card]="item" *ngFor="let item of getCards(3) | async"></app-card>
+    <button (click)="addItem(3)">Add Item +</button>
+  </div>
+  <div class="col">
+    <h2>George</h2>
+    <app-card [card]="item" *ngFor="let item of getCards(4) | async"></app-card>
+    <button (click)="addItem(4)">Add Item +</button>
+  </div>  
 </div>

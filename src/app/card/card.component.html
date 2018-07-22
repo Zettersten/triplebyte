@@ -1,0 +1,18 @@
+<div class="item" @fade>
+  <div class="column">
+    <button class="left" (click)="moveLeft(card)">
+      &gt;
+    </button>
+  </div>
+  <div class="column column-wide">
+    <div class="middle">
+      {{card.description}}
+      <small>{{card.cardId | date : "short"}}</small>
+    </div>
+  </div>
+  <div class="column">
+    <button class="right" (click)="moveRight(card)">
+      &lt;
+    </button>
+  </div>
+</div>
